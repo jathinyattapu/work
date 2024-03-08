@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            background-color: lightblue;
+            text-align: center;
+            padding: 10px;
+        }
+        nav {
+            background-color: aqua;
+        }
+        table th{
+            padding: 10px;
+        }
+        #tb1 {
+            background-color: antiquewhite;
+        }
+        footer {
+            background-color: lightblue;
+            text-align: center;
+            font-size: 15;
+        }
+        p{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header \>
+        <h1>Hospital</h1>
+    </header>
+    <nav>
+        <table align="center">
+            <th><a href="home.html">Home</a></th>
+            <th><a href="register.html">Register</a></th>
+            <th><a href="contact.html">Contact</a></th>
+            <th><a href="about.html">About Us</a></th>
+        </table>       
+    </nav>
+    <div>
+        <form>
+        <table align="center" id="tb1">
+          <tr><td><label for="name">Your Name</label></td>
+          <td><input type="text" id="name" name="fullName" required /></td></tr>
+  
+          <tr><td><label for="email">Your Email Address</label></td>
+          <td><input type="email" id="email" name="email" required /></td></tr>
+  
+          <tr><td><label for="message">Your Message</label></td>
+          <td><textarea name="message" id="message" cols="30" rows="10"></textarea></td></tr>
+  
+          <tr><td colspan="2" align="center"><button type="submit">Send</button></td></tr>
+        </table>
+        </form>
+      </div>
+    <footer>
+        <p>Hospital <br> @ All Rights Reserved 2024.</p>
+    </footer>
+</body>
+</html>

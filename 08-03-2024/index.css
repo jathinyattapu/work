@@ -1,0 +1,42 @@
+#grad1 {
+    height: 200px;
+    background-color: red;
+    background-image: linear-gradient(red, yellow);
+  }
+
+  #grad2 {
+    height: 200px;
+    background-color: red; 
+    background-image: linear-gradient(to right, red , yellow);
+  }
+
+  #grad3 {
+    height: 200px;
+    background-color: red; 
+    background-image: linear-gradient(to bottom right, red, yellow);
+  }
+
+
+  #grad4 {
+    height: 200px;
+    background-color: red; 
+    background-image: linear-gradient(red, yellow, green);
+  }
+  
+  #grad5 {
+    height: 200px;
+    background-color: red;
+    background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+  }
+  
+  #grad6 {
+    height: 200px;
+    background-color: red; 
+    background-image: linear-gradient(red 10%, green 85%, blue 90%);
+  }
+
+  #grad7 {
+        height: 200px;
+        background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+      }
+  

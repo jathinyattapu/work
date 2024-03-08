@@ -1,0 +1,103 @@
+body {
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+        background-image: url("books-5937823_1920.jpg");
+
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  nav {
+    background-color: #444;
+    text-align: center;
+    padding: 10px 0;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 20px;
+  }
+  nav a:hover {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid wheat;
+    text-decoration: none;
+  }
+  section {
+    padding: 20px;
+  }
+  .container {
+    max-width: 800px;
+    margin: auto;
+  }
+  .marquee {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+  }
+  @keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+  }
+  .results-search {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .results-search input[type="text"],
+  .results-search input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  .results-search input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .results-search input[type="submit"]:hover {
+    background-color: #555;
+  }
+  .footer {
+    background: #061D25;
+    padding: 10px 0;
+    color: white;
+  }
+  .footer a{
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-right: 1px solid #70726F;
+    transition: all .5s ease;
+  }
+  .footer a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 25px;
+  }
+  a{
+    text-decoration: none;
+  }
+  a:hover{
+    color: red;
+  }
+  span:hover{
+    color: lightgreen;
+  }

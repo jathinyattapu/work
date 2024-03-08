@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            background-color: lightblue;
+            text-align: center;
+            padding: 10px;
+        }
+        nav {
+            background-color: aqua;
+        }
+        table th{
+            padding: 10px;
+        }        
+        footer {
+            background-color: lightblue;
+            text-align: center;
+            font-size: 15;
+        }
+        p{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header \>
+        <h1>Hospital</h1>
+    </header>
+    <nav>
+        <table align="center">
+            <th><a href="home.html">Home</a></th>
+            <th><a href="register.html">Register</a></th>
+            <th><a href="contact.html">Contact</a></th>
+            <th><a href="about.html">About Us</a></th>
+        </table>       
+    </nav>
+    <br>
+    <div>
+        <br>
+         <form>
+            <table align="center">
+                
+                <tr>
+                    <td><label>Patient ID</label></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><label>First Name</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label>Last Name</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                
+                <tr>
+                    <td><label>Email</label></td>
+                    <td><input type="email"></td>
+                </tr>
+                <tr>
+                    <tr>
+                        <td><label>Phone Number</label></td>
+                        <td><input type="Number"></td>
+                    </tr>
+                </tr>
+                <tr>
+                    <td><label>Gender</label>  </td>
+                    <td><input type="radio" id="gen" name="gen" value="male"/>Male  
+                    <input type="radio" id="gen" name="gen" value="female"/>Female</td>
+                </tr>
+                <tr>
+                    <td><label>Symptoms</label>  </td>
+                    <td><input type="checkbox" id="cricket" name="cricket" value="cricket"/>  
+                    <label>Fever</label> <br>  
+                    <input type="checkbox" id="football" name="football" value="football"/>  
+                    <label>Cold</label> <br>  
+                    <input type="checkbox" id="hockey" name="hockey" value="hockey"/>  
+                    <label>Pains</label> </td>                  
+                </tr>
+                <tr>
+                    <tr>
+                        <td><label>Date of Joining</label></td>
+                        <td><input type="date"></td>
+                    </tr>
+                </tr>
+                <tr>
+                    <td><input type="submit"></td>
+                    <td><input type="reset"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <footer>
+        <p>Hospital <br> @ All Rights Reserved 2024.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.a1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: e1;
+    animation-duration: 10s;
+}
+
+@keyframes e1 {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+
+
+  .a2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: e2;
+    animation-duration: 4s;
+  }
+  
+  @keyframes e2 {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+
+ 
+  .a3 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: e3;
+    animation-duration: 4s;
+    animation-delay: 2s;
+  }
+  
+  @keyframes e3 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+
+  .a4 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: e4;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+  }
+  
+  @keyframes e4 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }

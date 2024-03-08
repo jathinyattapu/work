@@ -1,0 +1,36 @@
+#t1{
+    text-shadow: 2px 2px;
+}
+#t2{
+    text-shadow: 2px 2px red;
+}
+#t3{
+    text-shadow: 2px 2px 5px red;
+}
+#t4{
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+#t5{
+    text-shadow: 0 0 3px #FF0000;
+}
+#t6{
+    color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+#t7{
+    color: coral;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+div{
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    background-color: coral;
+}
+#d1{   box-shadow: 10px 10px lightblue;}
+#d2{   box-shadow: 10px 10px 5px lightblue; }
+#d3{   box-shadow: 10px 10px 5px 12px lightblue; }
+#d4{   box-shadow: 10px 10px 5px lightblue inset;}
+#d5{   box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;}
+

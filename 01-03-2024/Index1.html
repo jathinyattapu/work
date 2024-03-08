@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Coloring for cells</title>
+    <style>
+    body{
+        background-image: url('https://imgs.search.brave.com/pUrWcwLIeUm2n-vZz4fnHuq5uBR3GMzCxC9u23aqngo/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTgw/NDk3NTEyMi9waG90/by9ncmVlbi1jaHJp/c3RtYXMtYmFja2dy/b3VuZC13aXRoLWZp/ci1icmFuY2hlcy1h/bmQtZGVjb3JhdGlv/bnMud2VicD9iPTEm/cz0xNzA2NjdhJnc9/MCZrPTIwJmM9a1Zf/UUFlR2dQZDJUWERf/NnBoeVVlZHhpZmpu/T2lPdzBSZ19yYnct/bDdYbz0');
+        background-repeat: no-repeat;
+    }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      
+      tr:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+      }
+      
+      th:nth-child(even),td:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+      }
+      </style>
+</head>
+<body>
+    <table style="border-collapse: collapse;"> 
+        <caption>DETAIL's</caption> 
+        <tr> 
+            <th>Firstname</th> 
+            <th>Lastname</th> 
+            <th>Age</th>
+            <th>Gender</th> 
+        </tr> 
+        <tr> 
+            <td>Jathin</td> 
+            <td>Reddy</td> 
+            <td>28</td> 
+            <td>Male</td>
+        </tr> 
+        <tr> 
+            <td>Surendra</td> 
+            <td>Teja</td> 
+            <td>26</td> 
+            <td>Male</td>
+        </tr> 
+        <tr> 
+            <td>Prasanthi</td> 
+            <td>Naidu</td> 
+            <td>24</td>
+            <td>Female</td> 
+        </tr> 
+    </table> 
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover</title>
+    <style>
+        body{
+            font-size: 16px;
+        }
+        img:hover{opacity: 0.75; border-radius: 15px;}
+        li{
+            padding: 5px;
+            background: black;
+            color: white;
+            margin-right: 26px;
+        }
+        li:hover{
+            background-color: rgba(28, 87, 215, 0.75);
+        }
+        ul{ display: flex;}
+        div {
+            background-color: rgb(94, 177, 210);
+            padding: 20px;
+            display: none;
+            }
+        span:hover + .d1 {
+        display: block;
+        }
+        .Register:hover + .d2{ background-color: aliceblue; color: black;}
+    </style>
+</head>
+<body>
+    <img src="download.jfif"><br>
+    <nav>
+        <ul style="list-style-type: none;">
+            <li>Home</li>
+            <li>Register</li>
+            <li>Contact</li>
+            <li>About us</li>
+        </ul>
+    </nav>
+    <span>Jathin (Hover)</span>
+    <div class="d1">My name is Jathin!</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Practice</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+        table, 
+        th, 
+        td { 
+            border: 1px solid black; 
+        }
+        th{
+            padding: 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!--Simple table -->
+    <table style="border-collapse: collapse;"> 
+        <tr> 
+            <th>Firstname</th> 
+            <th>Lastname</th> 
+            <th>Age</th> 
+        </tr> 
+        <tr> 
+            <td>Jathin</td> 
+            <td>Reddy</td> 
+            <td>28</td> 
+        </tr> 
+        <tr> 
+            <td>Surendra</td> 
+            <td>Teja</td> 
+            <td>26</td> 
+        </tr> 
+        <tr> 
+            <td>Prasanth</td> 
+            <td>Naidu</td> 
+            <td>24</td> 
+        </tr> 
+    </table> 
+    <br>
+    <table style="border: 1px solid black;"> 
+        <tr> 
+            <th>Book Name</th> 
+            <th>Author Name</th> 
+            <th>Genre</th> 
+        </tr> 
+        <tr> 
+            <td>Game of Thrones</td> 
+            <td>Markus</td> 
+            <td>Movie Fiction</td> 
+        </tr> 
+        <tr> 
+            <td>The Cruel Prince</td> 
+            <td>Holly Black</td> 
+            <td>Fantasy</td> 
+        </tr> 
+        <tr> 
+            <td>The Silent Patient</td> 
+            <td> Alex</td> 
+            <td>Psychological</td> 
+        </tr> 
+    </table> 
+
+    <br>
+<!--padding -->
+<table style="border-collapse: collapse; padding: 20px;"> 
+    <caption>DETAIL's</caption> 
+    <tr> 
+        <th>Firstname</th> 
+        <th>Lastname</th> 
+        <th>Age</th> 
+    </tr> 
+    <tr> 
+        <td>Jathin</td> 
+        <td>Reddy</td> 
+        <td>28</td> 
+    </tr> 
+    <tr> 
+        <td>Surendra</td> 
+        <td>Teja</td> 
+        <td>26</td> 
+    </tr> 
+    <tr> 
+        <td>Prasanth</td> 
+        <td>Naidu</td> 
+        <td>24</td> 
+    </tr> 
+</table> 
+<br>
+<h2>Cell merge two columns</h2> 
+    <table style="width:100%; background-color: #f2f2d1;"> 
+        <tr> 
+            <th>Name</th> 
+            <th colspan="2">Telephone</th> 
+        </tr> 
+        <tr> 
+            <td>Vikas Rawat</td> 
+            <td>9125577854</td> 
+            <td>8565557785</td> 
+        </tr> 
+    </table> 
+
+    <br>
+    <body> 
+        <h2>Cell merge two rows</h2> 
+        <table style="width:75%;" > 
+            <tr> 
+                <th>Name</th> 
+                <td>Vikas</td> 
+            </tr> 
+            <tr> 
+                <th rowspan="2">Telephone</th> 
+                <td>9125577854</td> 
+            </tr> 
+            <tr> 
+                <td>8565557785</td> 
+            </tr> 
+        </table>
+<br>
+
+    <div style="float: right;">
+        <img src="https://imgs.search.brave.com/s2ApbNw2IeuLodvIpWr_COYXGLAo8gEb6LSbZKJNfwE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAxLzYxLzIyLzA5/LzM2MF9GXzE2MTIy/MDk2NF90YzJQZ2Fl/VFJCenZ5ZEZzR3lK/MGFpa21lM1oxdEhQ/Yy5qcGc">
+    </div>
+    <div style="float: left;">
+        <img src="https://imgs.search.brave.com/pUrWcwLIeUm2n-vZz4fnHuq5uBR3GMzCxC9u23aqngo/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTgw/NDk3NTEyMi9waG90/by9ncmVlbi1jaHJp/c3RtYXMtYmFja2dy/b3VuZC13aXRoLWZp/ci1icmFuY2hlcy1h/bmQtZGVjb3JhdGlv/bnMud2VicD9iPTEm/cz0xNzA2NjdhJnc9/MCZrPTIwJmM9a1Zf/UUFlR2dQZDJUWERf/NnBoeVVlZHhpZmpu/T2lPdzBSZ19yYnct/bDdYbz0">
+    </div>
+
+</body>
+</html>
