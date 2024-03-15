@@ -1,4 +1,4 @@
-body {
+  body {
     font-family: Roboto;
     margin: 0;
     padding: 0;
@@ -71,22 +71,23 @@ body {
     border-radius: 5px;
   }
   input[type="submit"]:hover {
-    ba
-    .footer {
-        background: #061D25;
-        padding: 10px 0;
-        color: white;
-      }
-      .footer a{
-        color: white;
-        font-size: 20px;
-        padding: 10px;
-        border-right: 1px solid #70726F;
-        transition: all .5s ease;
-      }
-      .footer a:hover {
-        color: black;
-        background-color: white;
-        border-radius: 25px;
-      background-color: #555;}
+    background-color: whitesmoke;
   }
+  .footer {
+    background: #061D25;
+    padding: 10px 0;
+    color: white;
+  }
+  .footer a{
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-right: 1px solid #70726F;
+    transition: all .5s ease;
+  }
+  .footer a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 25px;
+    background-color: #555;
+}
