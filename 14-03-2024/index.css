@@ -1,0 +1,20 @@
+.img1 {
+    height: 200px;
+    background: url("profile.webp") no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .img2 {
+    height: 200px;
+    background: url("rest1.webp") no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .img3 {
+    height: 200px;
+    background: url("rest2.webp") no-repeat;
+    background-position: center;
+    background-size: cover;
+  }

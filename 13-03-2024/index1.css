@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    overflow: hidden;
+    background-color: rgba(79, 173, 213, 0.25);
+    padding: 20px 10px;
+  }
+  
+  .header a {
+    display: flex;
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 25px;
+    margin-left: 25px;
+  }
+  
+  .img1{
+      height: 50px;
+      width: 50px;
+      border-radius: 25px;
+  }
+  
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .header a.active {
+    background-color: rgb(138, 175, 212);
+    color: white;
+  }
+  
+  .header a:hover{
+      background-color: azure;
+      color: black;
+      text-decoration: none;
+  }
+  
+  .header-right {
+    float: right;
+  }
+  
+  .header-left {
+      float: left;
+    }
+  
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .header-right,.header-left {
+      float: none;
+    }
+  }
+    video {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .video-wrapper {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .vheader{
+        position: relative;
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px rgb(124, 177, 128), 0 0 5px rgb(0, 104, 139);
+        font-size: larger;
+      }
+
+
+/* items section */
+    .food{
+        position: relative;
+    }
+
+    .items {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-bottom: 20px;
+    }
+    .icard {
+        display: inline-block;
+        width: 200px;
+        margin-right: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    .icard:hover {
+        transform: translateY(-5px);
+    }
+    .icard img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ccc;
+    }
+    .icard .info {
+        padding: 10px;
+    }
+    .icard h3 {
+        margin-top: 0;
+    }
+
+/* contact section */
+.container1 {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button{
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 25px;
+    padding: 5px 15px;
+    font-size: large;
+}
+.contact-form button:hover{
+    background-color: #70726F;
+}
+/* map specifiations*/
+ .map-container {
+    max-width: 500px;
+    margin: auto;
+
+}
+ .map-container iframe{
+    border: 25px;;
+ }
+/* footer */
+  .footer {
+    background: #061D25;
+    padding: 10px 0;
+    color: white;
+  }
+  .footer a{
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-right: 1px solid #70726F;
+    transition: all .5s ease;
+  }
+  .footer a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 25px;
+  }
+  a{
+    text-decoration: none;
+  }
+  a:hover{
+    color: red;
+  }
+  span:hover{
+    color: lightgreen;
+  }
