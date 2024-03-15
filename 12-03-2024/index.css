@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* navigaton */
+ .navigation{
+    background-image: linear-gradient(rgba(190, 230, 220, 0),rgba(95, 43, 43, 0.75)),url("wallpaperflare.com_wallpaper.jpg");;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 50vw;
+    padding-top: 25px;
+ }
+ .nav1{
+    display: flex;
+    align-items: center;
+    width: 65%;
+    margin: auto;
+    justify-content: space-between;
+ }
+ .logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+ }
+.nav1 ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px; 
+    position: relative;   
+}
+.nav1 ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+.nav1 ul li:hover:after{
+    width: 100%;
+    transition: 2s;
+}
+.nav1 ul li a{
+    text-decoration:none;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+}
+.div2{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    transform: translateY(-50%);
+    color: rgb(249, 239, 225)
+}
+.div2 h1{
+    font-size: 90px; 
+    margin-top: 25px;
+}
+.div2{
+    margin: 50px auto;
+    font-weight: 100;
+    line-height: 50px;
+}
+
+.container1 {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* items section */
+    .food{
+        background-color: beige;
+    }
+
+    .items {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-bottom: 20px;
+    }
+    .icard {
+        display: inline-block;
+        width: 200px;
+        margin-right: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    .icard:hover {
+        transform: translateY(-5px);
+    }
+    .icard img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ccc;
+    }
+    .icard .info {
+        padding: 10px;
+    }
+    .icard h3 {
+        margin-top: 0;
+    }
+
+/* contact section */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid white;
+    background: transparent;
+    color:white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background-color: rgb(167, 208, 208);
+    height: 100%;
+    width: 0;
+    border-radius: 25px; 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: .5s;
+}
+ button:hover span{
+    width: 100%;
+ }
+ button:hover{
+    border-radius: none;
+ }
+ .map-container {
+    max-width: 500px;
+    margin: auto;
+}
+.footer {
+    background: #061D25;
+    padding: 10px 0;
+    color: white;
+  }
+  .footer a{
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-right: 1px solid #70726F;
+    transition: all .5s ease;
+  }
+  .footer a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 25px;
+  }
+  a{
+    text-decoration: none;
+  }
+  a:hover{
+    color: red;
+  }
+  span:hover{
+    color: lightgreen;
+  }
