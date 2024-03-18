@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(45, 45, 45);
+}
+.navbar-brand{
+    border: 2px solid blue;
+    padding: 10px;
+}
+#profile span{
+    color: blue;
+}
+#profile h1{
+    color: white;
+}
+#profile p{
+    color: gainsboro;
+}
+#profile{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-left: 5vw;
+}
+#img1{
+    padding: 25px;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    float: left;
+}
+#profile1 h3{
+    color: yellowgreen;
+}
+#profile1 p,#profile1 h1{
+    color: white;
+}
+
+#profile1{
+    padding: 25px;
+}
+
+#img2{
+    float: left;
+    align-self: center;
+}
