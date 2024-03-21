@@ -1,6 +1,9 @@
 body{
     background-color: rgb(45, 45, 45);
 }
+body div{
+    padding: 10px;
+}
 .navbar-nav{
     text-align: right;
 }
@@ -8,6 +11,9 @@ body{
 .navbar-brand{
     border: 2px solid blue;
     padding: 10px;
+}
+.mycontainer h3,.mycontainer h1{
+    margin-left: 5vw;
 }
 #profile span{
     color: blue;
@@ -52,6 +58,9 @@ h3{
     width: 100px;
     height: 100px;
 }
+.img3{
+    padding: 5px;
+}
 
 #skills{
     display: flex;
@@ -59,7 +68,7 @@ h3{
 
 #portfolio{
     padding: 25px;
-    background-color: grey;
+    margin-left: 5vw;
 }
 
 #portfolio h4{
@@ -77,7 +86,71 @@ h3{
     margin-right: 25px;
     margin-top: 25px;
 }
+#p-1{
+    background-color: grey;
+}
 
+#skills h2{
+    color: greenyellow;
+}
+#skills p{
+    color: grey;
+    
+}
+.sk1{
+    display: flex;
+}
+.sk1 img{
+    width: 100px;
+    height: 100px;
+}
+#skills{
+    text-align: justify;
+}
+.card{
+    background-color: #212529;
+}
+.card h2{
+    color: white;
+}
+.card p{
+    color: gray;
+}
+.card a{
+    color: yellowgreen;
+}
+#p-3{
+    background-color: grey;
+}
+.card-body{
+    width: 250px;text-align: left;
+}
+footer{
+    padding: 10px;
+    background-color: rgb(21, 25, 28);
+}
+footer p{
+    color: grey;
+}
 
+.Testimonial{
+    display: flex;
+    align-items: center;
+}
+.test1{
+    position: relative;
+}
+.test2{
+    color: white;
+    background-color: gray;
+    width: 300px;
+    margin: auto;
+}
+.Project{
+    margin-left: 5VW;
+}
+.Project1{
+    margin:auto;    
+}
 
 
