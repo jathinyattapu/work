@@ -1,0 +1,273 @@
+.logo {
+  height: 60px;
+}
+
+div{
+    margin-bottom: 15px;
+}
+
+.ecommerce-service-section-heading {
+  color: #183b56;
+  font-family: "roboto";
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.ecommerce-service-section-description {
+  color: #616c7c;
+  font-family: "Roboto";
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.ecommerce-service-section-card-image {
+  height: 80px;
+  width: 80px;
+}
+
+.ecommerce-service-section-card-heading {
+  color: #1f2933;
+  font-family: "roboto";
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.ecommerce-service-section-card-description {
+  color: #7b8794;
+  font-family: "Roboto";
+  font-size: 14px;
+}
+
+.ecommerce-website-product-section-heading {
+  color: #183b56;
+  font-weight: bold;
+  font-family: "Roboto";
+  font-size: 35px;
+}
+
+.ecommerce-website-product-section-card {
+  height: 328px;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.headphone-bg1 {
+  background-image: url("over-ear-headphones.webp");
+  background-size: cover;
+}
+.headphone-bg2 {
+    background-image: url("laptop.webp");
+    background-size: cover;
+  }
+
+.ecommerce-website-product-section-card-heading {
+  color: white;
+  font-family: "roboto";
+  font-weight: bold;
+}
+
+.ecommerce-website-product-section-card-description {
+  color: white;
+  font-family: "roboto";
+  font-size: 18px;
+}
+
+.products-card-button {
+  color: #ff9f00;
+  background-color: #ffffff;
+  font-family: "Roboto";
+  font-size: 16px;
+  width: 134px;
+  height: 48px;
+  border-width: 0;
+  border-radius: 100px;
+}
+
+.ecommerce-website-offer-section-bg {
+  background-image: linear-gradient(to right, #f49541, #dd5d97);
+}
+
+.ecommerce-website-offer-section-specialoffer {
+  width: 100%;
+}
+
+.ecommerce-website-offer-section-appliance {
+  width: 100%;
+}
+
+.heading {
+  color: #ad2167;
+  font-family: "Bree Serif";
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.description {
+  color: white;
+  font-family: "Roboto";
+  font-size: 16px;
+}
+
+.span-elment {
+  font-style: italic;
+}
+
+.trending-website-vlog-heading {
+  color: #183b56;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.trending-website-vlog-card-image {
+  background-size: cover;
+  width: 100%;
+  padding: 8px;
+}
+
+.trending-website-vlog-card-name {
+  color: #959ead;
+  font-family: "Roboto";
+  font-size: 14px;
+}
+
+.trending-website-vlog-card-heading {
+  color: #183b56;
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.trending-website-vlog-card-description {
+  color: #959ead;
+  font-family: "Roboto";
+  font-size: 25px;
+}
+
+.button {
+  color: #ff9f00;
+  font-family: "roboto";
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.heading {
+  color: #183b56;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.button {
+  border-color: #ff9f00;
+  color: #ff9f00;
+  border-style: solid;
+  font-weight: 500;
+  border-width: 2px;
+  font-size: 18px;
+}
+
+.background-bg {
+  background-color: #0d2436;
+  background-size: cover;
+}
+
+.Ecommerce-Website-Footer-Section-image {
+  width: 50%;
+}
+
+.background-icon {
+  background-color: #152c3e;
+  border-radius: 20px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  margin: 5px;
+}
+
+.icon {
+  color: #5a718a;
+}
+
+.address {
+  color: #5a718a;
+  font-family: "Roboto";
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+.sub-heading {
+  color: #5a718a;
+  font-family: "Roboto";
+  font-size: 14px;
+}
+
+.ecommerce-footer-section-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.ecommerce-footer-section-list-item {
+  color: #5a7184;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.hr-line {
+  background-color: #5a7184;
+}
+
+.ecommerce-footer-section-copyright {
+  color: #959ead;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.Ecommerce-Website-Explore-Section-Heading {
+  color: #183b56;
+  font-family: "Roboto";
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.Ecommerce-Website-Explore-Section-card-heading {
+  color: #183b56;
+  font-family: "Roboto";
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.card-name {
+  color: #1f2933;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px;
+}
+
+.tv-card-image {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.button {
+  color: #ff9f00;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px;
+}
