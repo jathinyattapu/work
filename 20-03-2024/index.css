@@ -90,22 +90,28 @@ h3{
     background-color: grey;
 }
 
-#skills h2{
+.skills h2{
     color: greenyellow;
 }
-#skills p{
+.skills p{
     color: grey;
     
 }
 .sk1{
     display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
 }
 .sk1 img{
     width: 100px;
     height: 100px;
 }
-#skills{
-    text-align: justify;
+.skills{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
 }
 .card{
     background-color: #212529;
