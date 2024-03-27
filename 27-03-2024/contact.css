@@ -1,0 +1,66 @@
+body{
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 15px;
+    background-color: #f4f4f4;
+    padding: 0;
+    margin: 0;
+}
+
+.sec-1{
+    background-color: black;
+}
+
+.nav-item a{
+    color: white;
+}
+
+.nav-item a:hover, .nav-item a:active{
+    color: orange;    
+}
+.dropdown-menu a{
+    color: black;
+}
+
+.navbar-nav li{
+    padding: 0 10px ;
+}
+
+.dropdown-menu a:hover{
+    background-color:gray;
+}
+
+
+
+
+/* Footer */
+.ft_cols{
+    margin: 15px 0;
+    overflow: hidden;
+}
+.ft_cols h4{ 
+    margin: 0 0 20px 0; 
+    font-size: 18px; 
+    color: grey; 
+    font-weight: 300;
+}
+.links{ margin: 0; 
+    list-style: none;
+     padding: 0;
+    }
+.links li{ margin: 15px 0; }
+.links li a{ 
+    color: white; 
+    font-weight: 300;
+    text-decoration: none; 
+}
+.links li a:hover{ color:orange; }
+
+.social{ display: flex; flex-wrap: wrap; margin: 0 -10px; padding: 0; list-style: none; }
+.social li{ margin: 0 10px; font-size: 20px;}
+.social li a{ color:white; }
+.social li a:hover{ color:orange; }
+.copy_text{
+    color: white;
+    padding-bottom: 5px;
+}
+
