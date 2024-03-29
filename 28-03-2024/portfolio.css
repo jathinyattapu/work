@@ -1,0 +1,14 @@
+.body{
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+    font-weight: 200;
+    background: #ffffff; 
+}
+.navbar-nav a:hover{
+    color: #272343;
+    text-shadow: 1px 1px 2px #bae8e8, 0 0 5px #272343;
+}
+.navbar-brand:hover{
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 15px blue, 0 0 5px blue;
+}
