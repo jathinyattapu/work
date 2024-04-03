@@ -1,0 +1,82 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .bg-image {
+    background-image: url("workspace.jpg");
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+ 
+  .bg-text {
+    background-color: rgb(200, 200, 200);
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
+
+.div1{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav1{
+    display: flex;
+    align-items: center;
+    width: 65%;
+    margin: auto;
+    justify-content: center;
+}
+
+.nav1 ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px; 
+    position: relative;   
+}
+.nav1 ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+.nav1 ul li:hover:after{
+    width: 100%;
+    transition: 2s;
+}
+.nav1 ul li a{
+    text-decoration:none;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#collapsibleNavbar{
+  justify-content: center;
+}
+
+
+
