@@ -21,19 +21,41 @@
 </style>
 </head>
 <body>
-    <img id="seasonSmallImage" src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684395943/natural%20places/seasons-switcher-four-seasons-md-img_uuvvwe.png">
-    <img id="seasonMediumImage" src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684395858/natural%20places/seasons-switcher-four-seasons-xs-img_wxi4f3.png">
-    <br>
+
+    <div class="container">
+        <h2>Responsive Image</h2>
+        <img id="responsiveImage" class="img-fluid" src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684395943/natural%20places/seasons-switcher-four-seasons-md-img_uuvvwe.png" alt="Responsive Image">
+      </div>
+      <br>
     <button id="seasonButton1" style="background-color: green;">Spring</button>
     <button id="seasonButton2" style="background-color: yellow;">Summer</button>
     <button id="seasonButton3" style="background-color: red;">Autumn</button>
     <button id="seasonButton4" style="background-color: skyblue;">Winter</button>
+      <script>
+        function updateImage() {
+          var screenWidth = window.innerWidth;
+          var imageElement = document.getElementById("responsiveImage");
+          
+          if (screenWidth < 576) { // xs screens
+            imageElement.src = "https://res.cloudinary.com/dhpkv1tec/image/upload/v1684395943/natural%20places/seasons-switcher-four-seasons-md-img_uuvvwe.png";
+          } else { // md screens
+            imageElement.src = "https://res.cloudinary.com/dhpkv1tec/image/upload/v1684395858/natural%20places/seasons-switcher-four-seasons-xs-img_wxi4f3.png";
+          }
+        }
+        updateImage();
+        window.addEventListener('resize', updateImage);
+
+      </script>
+      
+
+    <!-- <img id="seasonSmallImage" src="">
+    <img id="seasonMediumImage" src="">
+    
 
         <script>
-            // Function to handle xs media query
-            function handleXS(mediaQuery) {
-                if (mediaQuery.matches) {
-                            document.getElementById('seasonButton1').addEventListener('click', function() {
+
+            function changeImagesXS() {
+                document.getElementById('seasonButton1').addEventListener('click', function() {
                             document.getElementById('seasonSmallImage').src = 'https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396051/natural%20places/seasons-switcher-spring-xs-img_mqpqnm.png';
                         });
                         document.getElementById('seasonButton2').addEventListener('click', function() {
@@ -45,13 +67,11 @@
                         document.getElementById('seasonButton4').addEventListener('click', function() {
                             document.getElementById('seasonSmallImage').src = 'https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396309/natural%20places/seasons-switcher-winter-xs-img_bebrmf.png';
                         }); 
-                }
             }
     
-            // Function to handle md media query
-            function handleMD(mediaQuery) {
-                if (mediaQuery.matches) {
-                        document.getElementById('seasonButton1').addEventListener('click', function() {
+
+            function changeImagesMD() {
+                document.getElementById('seasonButton1').addEventListener('click', function() {
                         document.getElementById('seasonMediumImage').src = 'https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396063/natural%20places/seasons-switcher-spring-md-img_lwd2gw.png';
                     });
                     document.getElementById('seasonButton2').addEventListener('click', function() {
@@ -63,28 +83,6 @@
                     document.getElementById('seasonButton4').addEventListener('click', function() {
                         document.getElementById('seasonMediumImage').src = 'https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396318/natural%20places/seasons-switcher-winter-md-img_z5awmm.png';
                     });  
-                            }
-            }
-    
-            // Check for extra small (xs) screen size
-            var mediaQueryXS = window.matchMedia('(max-width: 575px)');
-            handleXS(mediaQueryXS); // Call initially
-            mediaQueryXS.addListener(handleXS); // Listen for changes
-    
-            // Check for medium (md) screen size
-            var mediaQueryMD = window.matchMedia('(min-width: 768px) and (max-width: 991px)');
-            handleMD(mediaQueryMD); // Call initially
-            mediaQueryMD.addListener(handleMD); // Listen for changes
-        </script>
-        <script>
-    
-            function changeImagesXS() {
-                document.getElementById('seasonSmallImage').src = 'https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396309/natural%20places/seasons-switcher-winter-xs-img_bebrmf.png';
-            }
-    
-
-            function changeImagesMD() {
-                document.getElementById('seasonMediumImage').src = 'https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396144/natural%20places/seasons-switcher-summer-md-img_ustin9.png';
             }
     
             document.getElementById('seasonButton').addEventListener('click', function() {
@@ -95,6 +93,6 @@
                     changeImagesMD();
                 }
             });
-        </script>
+        </script> -->
 </body>
 </html>
