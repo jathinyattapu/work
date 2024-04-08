@@ -34,10 +34,10 @@
 </div>
 <br><br>
     <div class="container"> 
-    <button onclick="s1()" id="seasonButton1" style="background-color: green;">Spring</button>
-    <button onclick="s2()" id="seasonButton2" style="background-color: yellow;">Summer</button>
-    <button onclick="s3()" id="seasonButton3" style="background-color: red;">Autumn</button>
-    <button onclick="s4()" id="seasonButton4" style="background-color: skyblue;">Winter</button>
+    <button onclick="f1()" id="seasonButton1" style="background-color: green;">Spring</button>
+    <button onclick="f2()" id="seasonButton2" style="background-color: yellow;">Summer</button>
+    <button onclick="f3()" id="seasonButton3" style="background-color: red;">Autumn</button>
+    <button onclick="f4()" id="seasonButton4" style="background-color: skyblue;">Winter</button>
     </div>
 
 
@@ -62,19 +62,19 @@
     // Call updateImages function whenever the window size changes
     window.addEventListener('resize', updateImages);
 
-    function s1(){
+    function f1(){
         document.getElementById('seasonSmallImage').src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396051/natural%20places/seasons-switcher-spring-xs-img_mqpqnm.png";
         document.getElementById('seasonMediumImage').src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396063/natural%20places/seasons-switcher-spring-md-img_lwd2gw.png";
     }
-    function s2(){
+    function f2(){
         document.getElementById('seasonSmallImage').src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396137/natural%20places/seasons-switcher-summer-xs-img_nbemrr.png";
         document.getElementById('seasonMediumImage').src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396144/natural%20places/seasons-switcher-summer-md-img_ustin9.png";
     }
-    function s3(){
+    function f3(){
         document.getElementById('seasonSmallImage').src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396264/natural%20places/seasons-switcher-autumn-xs-img_kriuy7.png";
         document.getElementById('seasonMediumImage').src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396272/natural%20places/seasons-switcher-autumn-md-img_kmnmcu.png";
     }
-    function s4(){
+    function f4(){
         document.getElementById('seasonSmallImage').src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396309/natural%20places/seasons-switcher-winter-xs-img_bebrmf.png";
         document.getElementById('seasonMediumImage').src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396318/natural%20places/seasons-switcher-winter-md-img_z5awmm.png";
     }

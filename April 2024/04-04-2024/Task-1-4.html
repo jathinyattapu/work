@@ -26,15 +26,15 @@
     <img id="puppyImage" src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396469/natural%20places/white-puppy-img_cjfliy.png" width="900px" height="500px"><br>
     <p class="pt-5">
     <i id="likeIcon" class="fa fa-thumbs-up" style="font-size:48px;"></i> &nbsp; &nbsp; &nbsp; &nbsp;
-    <button id="likeButton">Like</button> &nbsp; &nbsp; &nbsp; &nbsp;
+    <button id="likeButton" onclick="f1()">Like</button> &nbsp; &nbsp; &nbsp; &nbsp;
     </div></p>
 <script>
-    document.getElementById("likeButton").addEventListener("click", function() {
+        function f1() {
         document.getElementById("puppyImage").src = "https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396484/natural%20places/white-puppy-liked-img_wohqq2.png";
         document.getElementById("likeIcon").style.color = "red";
         document.getElementById("likeButton").style.color = "white";
         document.getElementById("likeButton").style.backgroundColor = "black";
-    });
+    };
 </script>
 
 </body>

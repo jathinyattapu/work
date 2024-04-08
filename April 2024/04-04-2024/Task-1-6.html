@@ -18,18 +18,18 @@
 <div class="container">
     <img id="imageElement" src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396816/natural%20places/sizing-an-image-img_l7gqxo.png" alt="Image" style="width: 200px;">
     <br><br><b>
-    <button id="decrementButton"><strong>-</strong></button>&nbsp; &nbsp;<span id="imageWidth">200px</span>&nbsp; &nbsp;
-    <button id="incrementButton"><strong>+</strong></button>
+    <button id="decrementButton" onclick="d()"><strong>-</strong></button>&nbsp; &nbsp;<span id="imageWidth">200px</span>&nbsp; &nbsp;
+    <button id="incrementButton" onclick="i()"><strong>+</strong></button>
     <br></b>
     <p class="warning-message" id="warningMessage"></p>
     
 </div>
 
     <script>
-        document.getElementById('incrementButton').addEventListener('click', function() {
-            var imageElement = document.getElementById('imageElement');
-            var currentWidth = parseInt(imageElement.style.width) || imageElement.clientWidth;
-            var newWidth = currentWidth + 5;
+        function i() {
+            let imageElement = document.getElementById('imageElement');
+            let currentWidth = parseInt(imageElement.style.width);
+            let newWidth = currentWidth + 5;
             if (newWidth <= 300) {
                 imageElement.style.width = newWidth + 'px';
                 document.getElementById('imageWidth').textContent = newWidth + 'px';
@@ -37,12 +37,12 @@
             } else {
                 document.getElementById('warningMessage').textContent = 'Width cannot exceed 300px';
             }
-        });
+        };
 
-        document.getElementById('decrementButton').addEventListener('click', function() {
-            var imageElement = document.getElementById('imageElement');
-            var currentWidth = parseInt(imageElement.style.width) || imageElement.clientWidth;
-            var newWidth = currentWidth - 5;
+        function d() {
+            let imageElement = document.getElementById('imageElement');
+            let currentWidth = parseInt(imageElement.style.width);
+            let newWidth = currentWidth - 5;
             if (newWidth >= 100) {
                 imageElement.style.width = newWidth + 'px';
                 document.getElementById('imageWidth').textContent = newWidth + 'px';
@@ -50,7 +50,7 @@
             } else {
                 document.getElementById('warningMessage').textContent = 'Width cannot be less than 100px';
             }
-        });
+        };
     </script>
 </body>
 </html>
