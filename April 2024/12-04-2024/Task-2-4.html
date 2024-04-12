@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Example</title>
+    <style>
+        .tabs-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="aboutButton" onclick="f1()">About</button>
+    <button id="timeToVisitButton" onclick="f2()">Time to Visit</button>
+    <button id="attractionsButton" onclick="f3()">Attractions</button>
+
+    <div class="tabs-container" id="aboutTab">
+        <h2>About</h2>
+        <p>This is information about the place.</p>
+    </div>
+    <div class="tabs-container" id="timeToVisitTab">
+        <h2>Time to Visit</h2>
+        <p>Best time to visit and other related information.</p>
+    </div>
+    <div class="tabs-container" id="attractionsTab">
+        <h2>Attractions</h2>
+        <p>Popular attractions and things to do.</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const aboutButton = document.getElementById('aboutButton');
+            const timeToVisitButton = document.getElementById('timeToVisitButton');
+            const attractionsButton = document.getElementById('attractionsButton');
+            
+            const aboutTab = document.getElementById('aboutTab');
+            const timeToVisitTab = document.getElementById('timeToVisitTab');
+            const attractionsTab = document.getElementById('attractionsTab');
+            
+            function hideAllTabs() {
+                aboutTab.style.display = 'none';
+                timeToVisitTab.style.display = 'none';
+                attractionsTab.style.display = 'none';
+            }
+            
+            hideAllTabs();
+            aboutTab.style.display = 'block'; 
+            
+            function f1() {
+                hideAllTabs();
+                aboutTab.style.display = 'block';
+            };
+            
+            function f2() {
+                hideAllTabs();
+                timeToVisitTab.style.display = 'block';
+            };
+            
+           function f3() {
+                hideAllTabs();
+                attractionsTab.style.display = 'block';
+            };
+        });
+    </script>
+</body>
+</html>
