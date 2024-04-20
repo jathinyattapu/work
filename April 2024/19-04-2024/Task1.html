@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Display</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f3f3;
+            padding: 20px;
+        }
+        #jsonContainer {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="jsonContainer"></div>
+
+    <script>
+        let bikes = ["Hero", "Honda", "Bajaj", "Suzuki", "Yamaha"];
+        let person = {
+            name: "Rahul",
+            age: 25,
+            gender: "Male",
+        };
+        let todos = [{
+                todo: "Attending CCBP sessions",
+                todoStatus: "Completed",
+            },
+            {
+                todo: "Completing practice sets",
+                todoStatus: "Not Completed",
+            },
+            {
+                todo: "Asking doubts",
+                todoStatus: "Completed",
+            },
+        ];
+
+        let valuesToStringify = [bikes, person, todos];
+        let jsonContainer = document.getElementById('jsonContainer');
+        valuesToStringify.forEach(value => {
+            let preElement = document.createElement('pre');
+            let jsonString = JSON.stringify(value, null, 2);
+            preElement.textContent = jsonString;
+            jsonContainer.appendChild(preElement);
+        });
+    </script>
+</body>
+</html>

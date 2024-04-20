@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Parsing and HTML Update</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f3f3;
+            padding: 20px;
+        }
+        .greet {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p class="greet">Greetings from <span class="from"></span> to <span class="to"></span>:</p>
+    <p class="greet-text"></p>
+
+    <script>
+        let greeting = '{"greetText":"Wishing that the new year will bring joy, love, peace, and happiness to you.","from":"Jathin","to":"Suresh"}';
+        let parsedGreeting = JSON.parse(greeting);
+        let from = parsedGreeting.from;
+        let to = parsedGreeting.to;
+        let greetText = parsedGreeting.greetText;
+        document.querySelector('.from').textContent = from;
+        document.querySelector('.to').textContent = to;
+        document.querySelector('.greet-text').textContent = greetText;
+    </script>
+</body>
+</html>
