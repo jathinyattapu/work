@@ -1,12 +1,14 @@
 let todoItemsCon = document.getElementById("todoid");
 let addtodobtn = document.getElementById("todoInput");
 
+
 let todoList = [
-    {    text: "HTML",id:1    },
-    {    text: "CSS",id:2    },
-    {    text: "JavaScript",id:3    },
+    {    text: "HTML", id:1    },
+    {    text: "CSS", id:2    },
+    {    text: "JavaScript", id:3    },
 ];
 
+let Count = todoList.length;
 
 function f1(todo) {
     
@@ -65,6 +67,6 @@ function f1(todo) {
     }
         
         
-    addtodobtn.onclick = function(){
+    todoInput.onclick = function(){
         AddTodo();
     }
