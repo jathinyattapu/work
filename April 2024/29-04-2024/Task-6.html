@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task-9-6</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <br>
+    <div class="container text-center bg-light py-5">
+        <h1>Time Converter</h1>
+
+        <h5>Enter Hour and Minutes Values to Convert into seconds</h5>
+    <label for="hoursInput" class="m-2">Hours:</label>
+    <input type="number" class="m-2" id="hoursInput" placeholder="Enter hours">
+        <br>
+    <label for="minutesInput" class="m-2">Minutes:</label>
+    <input type="number" class="m-2" id="minutesInput" placeholder="Enter minutes">
+        <br>
+    <button class="m-2" id="convertBtn">Convert</button>
+
+    <p id="timeInSeconds"></p>
+    <p id="errorMsg"></p>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const hoursInput = document.getElementById('hoursInput');
+        const minutesInput = document.getElementById('minutesInput');
+        const convertBtn = document.getElementById('convertBtn');
+        const timeInSeconds = document.getElementById('timeInSeconds');
+        const errorMsg = document.getElementById('errorMsg');
+
+        convertBtn.addEventListener('click', function() {
+            const hours = parseInt(hoursInput.value);
+            const minutes = parseInt(minutesInput.value);
+
+            if (isNaN(hours) && isNaN(minutes)) {
+                errorMsg.textContent = "Please enter hours and minutes.";
+                timeInSeconds.textContent = "";
+                errorMsg.style.color = "#f7faf5";
+            } else if (isNaN(hours)) {
+                errorMsg.textContent = "Please enter hours.";
+                timeInSeconds.textContent = "";
+                errorMsg.style.color = "#f7faf5";
+            } else if (isNaN(minutes)) {
+                errorMsg.textContent = "Please enter minutes.";
+                timeInSeconds.textContent = "";
+                errorMsg.style.color = "#f7faf5";
+
+            } else {
+                const totalSeconds = hours * 3600 + minutes * 60;
+                timeInSeconds.textContent = `Converted time: ${totalSeconds} seconds`;
+                errorMsg.textContent = "";
+            }
+        });
+    });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Changer</title>
+  <style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    }
+
+    .bg-container {
+    background-image: url('');
+    background-size: cover  ;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .heading {
+    color: white;
+    }
+
+    .user-input {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="bg-container" id="bgContainer">
+    <h1 class="heading" id="heading">Theme Changer</h1>
+    <input type="text" class="user-input" id="themeUserInput" placeholder=" 'Light' or 'Dark'">
+  </div>
+  <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const bgContainer = document.getElementById('bgContainer');
+        const heading = document.getElementById('heading');
+        const userInput = document.getElementById('themeUserInput');
+
+        userInput.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+            const theme = userInput.value.toLowerCase();
+            if (theme === 'light') {
+                bgContainer.style.backgroundImage = "url('https://wallpapers.com/images/high/blue-hour-calms-6s55ocfu8vjouc1h.webp')";
+                heading.style.color = 'black';
+            } else if (theme === 'dark') {
+                bgContainer.style.backgroundImage = "url('https://wallpapers.com/images/high/beautiful-moon-in-the-darkness-s4bqvzi9oofzac22.webp')";
+                heading.style.color = 'white';
+            } else {
+                alert('Please enter a valid theme (Light or Dark)');
+            }
+            userInput.value = ''; 
+            }
+        });
+        });
+
+
+  </script>
+</body>
+</html>
