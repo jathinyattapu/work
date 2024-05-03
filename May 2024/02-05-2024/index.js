@@ -26,32 +26,54 @@ console.log(cars.length);
 
 console.log(cars.push("9999"));
 
-function displayGreeting(displayName) {
-    console.log("Hello");
-    displayName();
-    console.log("Good Morning!");
-    }
-    displayGreeting(function() {
-        console.log("Rahul");
-    });
+// function displayGreeting(displayName) {
+//     console.log("Hello");
+//     displayName();
+//     console.log("Good Morning!");
+//     }
+//     displayGreeting(function() {
+//         console.log("Rahul");
+//     });
 
-    function displayGreeting(displayName) {
-        console.log("Hello");
-        displayName();
-        console.log("Good Morning!");
+//     function displayGreeting(displayName) {
+//         console.log("Hello");
+//         displayName();
+//         console.log("Good Morning!");
+//         }
+
+//     function displayRahul() {
+//     console.log("Rahul");
+//     }
+//     displayGreeting(displayRahul);
+
+//     function displayGreeting(displayName) {
+//     console.log("Hello");
+//     displayName();
+//     console.log("Good Morning!");
+//     }
+//     let displayRam = function() {
+//         console.log("Ram");
+//     };
+//     displayGreeting(displayRam);
+
+
+
+
+
+    function f(e){
+        function a(b){
+            console.log("Hai! "+ b);
         }
-
-    function displayRahul() {
-    console.log("Rahul");
+    
+        a("This is Jathin");
+        console.log("I'm a Software Engineer.");
+        e();
     }
-    displayGreeting(displayRahul);
 
-    function displayGreeting(displayName) {
-    console.log("Hello");
-    displayName();
-    console.log("Good Morning!");
+    
+
+    let d = function(){
+        console.log("Working at Perfex Technologies");
     }
-    let displayRam = function() {
-        console.log("Ram");
-    };
-    displayGreeting(displayRam);
+    f(d);
+ 
