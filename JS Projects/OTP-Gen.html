@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Generator</title>
+    <style>
+          .container{
+            text-align: center;
+            border: 1px solid black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: auto;
+            max-width: 250px;
+            padding: 5px;
+        }
+
+        button,input{
+            padding: 5px 10px;
+            border-radius: 25px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <div class="container">
+        <h1>OTP Generator</h1>
+        <h2 id="otp"></h2>
+        <button id="btn">Generate</button>
+        <br>
+    </div>
+    <br>
+    <div class="container">
+        <h2>Enter OTP</h2>
+        <input type="text" id="inputElement" />
+        <div>
+        <button onclick="Verify()">Verify OTP</button>
+        </div>
+        <p id="msg"></p>
+    </div>
+
+    <script>
+        
+        let randomNumber = Math.ceil(Math.random() * 10000);
+
+        let otp = document.getElementById("otp");
+        let btn = document.getElementById("btn");
+        let count = 0;
+
+        btn.onclick = function(){
+            if(randomNumber<9){ otp.textContent = "000"+ randomNumber;}
+            else if(randomNumber<99){ otp.textContent = "00"+ randomNumber;}
+            else if(randomNumber<999){ otp.textContent = "0"+ randomNumber;}
+            else   {otp.textContent = randomNumber;}         
+            count++;
+        } 
+
+        let inputElement = document.getElementById("inputElement");
+        let msg = document.getElementById("msg");
+        function Verify() {
+        if(count == 0){msg.textContent = "Please, Generate OTP"; }else{
+        let inputValue = inputElement.value;
+        if(inputValue==randomNumber)
+        {msg.textContent = "OTP Correct"} else {msg.textContent = "OTP In-Correct"}
+        }};
+    </script>
+</body>
+</html>
