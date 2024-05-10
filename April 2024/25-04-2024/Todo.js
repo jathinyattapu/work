@@ -101,9 +101,9 @@ let Count = todoList.length;
 }
 
 
-    // for (let todo of todoList) {
-    // f1(todo);
-    // }
+    for (let todo of todoList) {
+    f1(todo);
+    }
 
 
     //create a todo adding
