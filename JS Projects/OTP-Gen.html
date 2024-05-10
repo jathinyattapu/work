@@ -58,11 +58,12 @@
         let inputElement = document.getElementById("inputElement");
         let msg = document.getElementById("msg");
         function Verify() {
+        if(inputElement.value==""){alert("Please Enter OTP");}else{
         if(count == 0){msg.textContent = "Please, Generate OTP"; }else{
         let inputValue = inputElement.value;
         if(inputValue==randomNumber)
         {msg.textContent = "OTP Correct"} else {msg.textContent = "OTP In-Correct"}
-        }};
+        }}};
     </script>
 </body>
 </html>
