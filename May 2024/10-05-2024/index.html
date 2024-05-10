@@ -6,16 +6,17 @@
     <title>Notes</title>
     <style>
         body{
-            padding: 0px;            margin: 0px;
+            padding: 0px; margin: 0px;
             background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(150,0,0,0.1));
         }
         .container{
-            width: 100%;            height: 100vh;
+            width: 100%;  height: 100vh;
             background-image: linear-gradient(blue green);
         }
         .c1{margin: 5vw;  }
-        button{padding: 5px 10px;border-radius: 5px;}
+        button{padding: 5px 10px;border-radius: 5px; margin-right: 10px;}
         button:hover{background-color: gainsboro;}
+        div{margin-top: 15px;}
 
     </style>
 </head>
@@ -23,12 +24,66 @@
     <div class="container">
         <div class="c1">
             <h1>Notes</h1>
-            <button>Add Note</button>
+            <button id="add">Add Note</button>
+            <button id="save">Save</button>
             <br>
-            <div class="c2">
-                
+            <div class="c2" id="Container">
             </div>
         </div>
     </div>
+    <script>
+        let Container = document.getElementById("Container");
+        let Add = document.getElementById("add");
+        let save = document.getElementById("save");
+        let count = 0;
+
+        function Shownotes(){
+        Container.innerHTML =  localStorage.getItem("Notes");
+        }
+
+        Shownotes();
+
+        function f(){
+            count++;
+            let listid = "div"+count;
+            let delid = "del"+count;
+
+            let list = document.createElement("div");
+            list.id = listid;
+            Container.appendChild(list);
+
+            let text = document.createElement("textarea");
+            text.cols = '50';
+            text.rows = '5';
+            text.placeholder = "Enter a Note";
+            list.appendChild(text);           
+            
+            list.appendChild(document.createElement("br"))
+
+            let del = document.createElement("button");
+            del.textContent = "Delete";
+            del.id = delid;
+
+            del.onclick = function(){
+                let remove = document.getElementById(delid);
+                list.remove(remove);
+            }
+
+            list.appendChild(del);
+
+            
+            
+        };  
+
+        Add.onclick = function(){
+            f();
+        }
+
+        save.onclick = function(){
+            localStorage.setItem("Notes", Container.innerHTML);
+        }
+
+
+    </script>
 </body>
 </html>
