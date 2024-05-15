@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    #notes-container {
+        margin-top: 20px;
+    }
+    .note {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .note textarea {
+        width: 100%;
+        height: 80px;
+        border: none;
+        resize: none;
+    }
+    .note-buttons {
+        margin-top: 5px;
+    }
+    .note-buttons button {
+        margin-right: 5px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<h1>Notes</h1>
+
+<div id="notes-container">
+    <!-- Notes will be added here dynamically -->
+</div>
+
+<div>
+    <textarea id="new-note" placeholder="Enter your note here"></textarea>
+    <div class="note-buttons">
+        <button onclick="addNote()">Add Note</button>
+        <button onclick="clearNotes()">Clear All Notes</button>
+    </div>
+</div>
+
+<script>
+    // Function to retrieve notes from local storage
+    function getNotes() {
+        return JSON.parse(localStorage.getItem('notes')) || [];
+    }
+
+    // Function to save notes to local storage
+    function saveNotes(notes) {
+        localStorage.setItem('notes', JSON.stringify(notes));
+    }
+
+    // Function to render notes on the page
+    function renderNotes() {
+        const notesContainer = document.getElementById('notes-container');
+        notesContainer.innerHTML = '';
+        const notes = getNotes();
+        notes.forEach((note, index) => {
+            const noteDiv = document.createElement('div');
+            noteDiv.classList.add('note');
+            noteDiv.innerHTML = `
+                <textarea oninput="updateNote(${index}, this.value)">${note}</textarea>
+                <div class="note-buttons">
+                    <button onclick="deleteNote(${index})">Delete</button>
+                </div>
+            `;
+            notesContainer.appendChild(noteDiv);
+        });
+    }
+
+    // Function to add a new note
+    function addNote() {
+        const newNoteTextarea = document.getElementById('new-note');
+        const newNote = newNoteTextarea.value.trim();
+        if (newNote !== '') {
+            const notes = getNotes();
+            notes.push(newNote);
+            saveNotes(notes);
+            renderNotes();
+            newNoteTextarea.value = '';
+        }
+    }
+
+    // Function to delete a note
+    function deleteNote(index) {
+        const notes = getNotes();
+        notes.splice(index, 1);
+        saveNotes(notes);
+        renderNotes();
+    }
+
+    // Function to update a note
+    function updateNote(index, newText) {
+        const notes = getNotes();
+        notes[index] = newText;
+        saveNotes(notes);
+    }
+
+    // Function to clear all notes
+    function clearNotes() {
+        localStorage.removeItem('notes');
+        renderNotes();
+    }
+
+    // Initial rendering of notes when the page loads
+    renderNotes();
+</script>
+
+</body>
+</html>

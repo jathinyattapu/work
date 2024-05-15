@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        li{ list-style: none;}
+        .checked{ text-decoration: line-through;}
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <br>
+    <div class="container">
+        <h1>Todo's</h1>
+        <h5>Create</h5>
+        <input type="text"id="inputtodo" placeholder="Add a Task"/>
+        <button id="addtodo" class="btn btn-primary">Add</button>
+        <br>
+        <br>
+        <div class="container">
+        <h2>Todo's List</h2>
+        <ul class="ulcontainer" id="todocontainer"></ul>
+        </div>
+        <button id="saveTodoButton" class="btn btn-success">Save</button>
+
+
+    </div>
+
+    <script>
+        let todocontainer = document.getElementById("todocontainer");
+        let addtodo = document.getElementById("addtodo");
+        let saveTodoButton = document.getElementById("saveTodoButton");
+
+
+        // let todoList = [
+        //     {text : "Jathin",id :1},
+        //     {text : "Suresh",id :2},
+        //     {text : "Lakshmi",id :3},
+        //     {text : "Ravi",id :4}
+        // ]
+        let todoList = getTodoListFromLocalStorage();
+        console.log(todoList);
+        let todosCount = todoList.length;
+
+
+        saveTodoButton.onclick = function () {
+        localStorage.setItem("todoList", JSON.stringify(todoList));
+        };
+
+        function getTodoListFromLocalStorage() {
+            let stringifiedTodoList = localStorage.getItem("todoList");
+            let parsedTodoList = JSON.parse(stringifiedTodoList);
+            if (parsedTodoList === null) {
+            return [];
+            } else {
+            return parsedTodoList;
+            }
+        }
+            
+
+        // For Adding the todos fron an array
+        function f1(todo){
+            // creating ids
+            let todoId = 'todo' + todo.id;
+            let checkboxId = 'checkbox' + todo.id;
+            let labelId = 'label' + todo.id;
+
+
+            let todoElement = document.createElement("li");
+            todoElement.id = todoId;
+            todoElement.classList.add("licontainer","py-2");
+            // todoElement.style.listStyle = "none";
+            todocontainer.appendChild(todoElement);
+
+            let inputElement = document.createElement("input");
+            inputElement.type = "checkbox";
+            inputElement.id = checkboxId; 
+
+            inputElement.onclick = function() {
+                onTodoStatusChange(checkboxId, labelId); //for line through while clicked(toggle)
+            }   
+
+            inputElement.classList.add("check-box");
+            todoElement.appendChild(inputElement);
+
+            let lableElement = document.createElement("label");
+            lableElement.textContent = todo.text;
+            lableElement.id = labelId;
+            lableElement.setAttribute("for", checkboxId)
+            lableElement.classList.add("labelele","px-5");
+            todoElement.appendChild(lableElement);
+
+            let delElement = document.createElement("button");
+            delElement.id = "del";
+            delElement.textContent = "Del";
+            delElement.className = "btn"
+            delElement.classList.add("btn-danger");
+            todoElement.appendChild(delElement);
+
+            delElement.onclick = function () { //For Deleting the li element
+                del(todoId);
+            };
+            
+        }
+
+
+        if(todoList!=[]){
+        for(let todo of todoList){
+            f1(todo);
+        }}
+
+        let count = todoList.length;
+
+        addtodo.onclick = function(){   
+            f2();
+        }
+
+        // adding new todo in li
+        function f2(){
+            let userInputElement = document.getElementById("inputtodo");
+            let userInputValue = userInputElement.value;
+            if(userInputValue === ""){
+            alert("Enter Valid Text");
+            return;
+            }
+
+            count = count + 1;
+            // new item adding in todo list
+            let newtodo = { text: userInputValue,
+                id: count};
+            
+            todoList.push(newtodo);
+            f1(newtodo);
+            userInputElement.value = "";
+        }
+
+        // function for deleting li 
+        function del(todoId){
+            let eledel = document.getElementById(todoId);
+            todocontainer.removeChild(eledel);    
+
+            let deleteElementIndex = todoList.findIndex(function(eachTodo) {
+                let eachTodoId = "todo" + eachTodo.id;
+                if (eachTodoId === todoId) {
+                return true;
+                } else {
+                return false;
+                }
+                });
+                todoList.splice(deleteElementIndex, 1);
+                
+        }
+
+        //for line through while clicked(toggle)
+        function onTodoStatusChange(checkboxId, labelId) {
+            let checkboxElement = document.getElementById(checkboxId);
+            let labelElement = document.getElementById(labelId);
+            labelElement.classList.toggle('checked');
+        }
+
+    </script>
+</body>
+</html>

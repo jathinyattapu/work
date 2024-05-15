@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <style>
+        .container{
+            text-align: center;
+            box-shadow: 0px 0px 5px black;
+            max-width: 450px;
+            margin: 0px auto;
+            padding: 10px 0px;
+        }
+        button{
+            padding: 5px 10px;
+            border-radius: 5px; 
+        }
+        button:hover{
+            background-color: gainsboro;
+        }
+        #retry{display: none;}
+    </style>
+</head>
+<body>
+    <br>
+    <div class="container">
+        <h2>For Download Click Below</h2>
+        <button id="download">Download</button>
+        <p id="msg"><span id="retry"><a href="#">Here</a></span></p>
+    </div>
+    <script>
+        let download = document.getElementById("download");
+        let msg = document.getElementById("msg");
+        download.onclick = function(){
+            
+            let counter = 10;
+            let id = setInterval(function() {
+                download.style.display = "none";
+                counter =  counter - 1;  
+                msg.textContent="Your file will be download in "+counter;                 
+                if(counter==0){clearInterval(id); 
+                                msg.textContent="If download is not yet started click "; 
+                                let a = document.createElement("a");
+                                a.textContent = "Here";
+                                a.style.fontStyle = "italic";
+                                a.style.color = "green";
+                                a.href ="index.html" 
+                                msg.appendChild(a);
+                            }
+            }, 1000);
+            
+        }
+    </script>
+</body>
+</html>
