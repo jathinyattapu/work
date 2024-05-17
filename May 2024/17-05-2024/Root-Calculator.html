@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Root Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="number"], select, button {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Root Calculator</h1>
+        <input type="number" id="numberInput" placeholder="Enter a number">
+        <select id="rootType">
+            <option value="2">Square Root</option>
+            <option value="3">Cube Root</option>
+            <option value="4">Fourth Root</option>
+            <option value="5">Fifth Root</option>
+        </select>
+        <button onclick="calculateRoot()">Calculate</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculateRoot() {
+            const number = parseFloat(document.getElementById('numberInput').value);
+            const rootType = parseInt(document.getElementById('rootType').value);
+            const resultElement = document.getElementById('result');
+
+            if (isNaN(number)) {
+                resultElement.textContent = 'Please enter a valid number.';
+                resultElement.style.color = 'red';
+                return;
+            }
+
+            const result = Math.pow(number, 1 / rootType);
+            resultElement.textContent = `The ${rootType} root of ${number} is ${result}.`;
+            resultElement.style.color = 'green';
+        }
+    </script>
+</body>
+</html>
