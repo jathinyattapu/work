@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Requests</title>
+</head>
+<body>
+    <script>
+            // let data = {
+            // name: "Jathin",
+            // gender: "Male",
+            // email: "y.jathinkumar@gmail.com",
+            // status: "Active",
+            // };
+
+
+            // let options = {
+            // method: "POST",
+            // headers: {
+            //     "Content-Type": "application/json",
+            //     Accept: "application/json",
+            //     Authorization: "Bearer 82b8e8659993ede84101bd5634aabe49c770f4ea238ddb17ce4ad9a4c5b975bb",
+            // },
+            // body: JSON.stringify(data),
+            // };
+            // fetch("https://gorest.co.in/public-api/users", options)
+            // .then(function (response) {
+            //     return response.json();
+            // })
+            // .then(function (jsonData) {
+            //     console.log(jsonData);
+            // });
+
+            let data = {
+            name: "Jathinkumar",
+            };
+
+            let options = {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                Authorization:
+                "Bearer 82b8e8659993ede84101bd5634aabe49c770f4ea238ddb17ce4ad9a4c5b975bb",
+            },
+            body: JSON.stringify(data),
+            };
+            fetch("https://gorest.co.in/public-api/users/jathin", options)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (jsonData) {
+                console.log(jsonData);
+            });
+
+            // let options = {
+            // method: "DELETE",
+            // headers: {
+            //     "Content-Type": "application/json",
+            //     Accept: "application/json",
+            //     Authorization: "Bearer 82b8e8659993ede84101bd5634aabe49c770f4ea238ddb17ce4ad9a4c5b975bb",
+            // },
+            // };
+            // fetch("https://gorest.co.in/public-api/users/6921968", options)
+            // .then(function (response) {
+            //     return response.json();
+            // })
+            // .then(function (jsonData) {
+            //     console.log(jsonData);
+            // });
+
+            // let options = {
+            // method: "GET",
+            // };
+            // fetch("https://gorest.co.in/public-api/users", options)
+            // .then(function (response) {
+            //     return response.json();
+            // })
+            // .then(function (jsonData) {
+            //     console.log(jsonData);
+            // });
+ 
+
+    </script>
+</body>
+</html>
