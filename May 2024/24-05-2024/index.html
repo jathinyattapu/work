@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: 0 5vw;
+        }
+        li{list-style: none;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ToDo List</h1>
+        <h2>Add a Task</h2>
+        <input type="text" id="userinput" placeholder="Add Note">
+        <button onclick="add()">Add</button>
+        <div class="container">
+            <h3>TodoList</h3>
+            <ul id="list"></ul>
+            <br>
+            <button onclick="save()">Save</button>
+        </div>
+    </div>
+    <script>
+        let list = document.getElementById("list");
+        let userinput = document.getElementById("userinput");
+
+        function add(){
+            let item = document.createElement("li");
+            list.appendChild(item);
+
+            let label = document.createElement("label");
+            label.textContent = userinput.value;
+            item.appendChild(label);
+
+            let del = document.createElement("button");
+            del.textContent = "Remove";
+            del.onclick = function(){
+                list.removeChild(item)
+            }
+            item.appendChild(del);
+
+            userinput.value = "";
+        }
+
+        function save(){
+            localStorage.setItem("TodoList",JSON.stringify(list));
+        }
+    </script>
+</body>
+</html>
