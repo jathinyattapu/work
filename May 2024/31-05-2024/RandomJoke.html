@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke App</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p id="jokeText"></p>
+                <button id="jokeBtn" class="btn btn-primary">Get Joke</button>
+                <div id="spinner" class="spinner-border text-primary" role="status" style="display: none;">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('jokeBtn').addEventListener('click', function() {
+            // Show spinner
+            document.getElementById('spinner').style.display = 'inline-block';
+
+            // Make HTTP GET request
+            fetch('https://apis.ccbp.in/jokes/random')
+                .then(response => {
+                    // Hide spinner
+                    document.getElementById('spinner').style.display = 'none';
+
+                    // Check if response is successful
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error('HTTP request failed');
+                    }
+                })
+                .then(data => {
+                    // Set joke text
+                    document.getElementById('jokeText').innerText = data.value;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Set error message
+                    document.getElementById('jokeText').innerText = 'Failed to fetch joke. Please try again later.';
+                });
+        });
+
+    </script>
+</body>
+</html>

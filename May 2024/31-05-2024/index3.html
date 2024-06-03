@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Request Demo</title>
+</head>
+<body>
+    <input type="text" id="userInput">
+    <textarea id="requestBody"></textarea>
+    <button id="sendPutRequestBtn">Send PUT Request</button>
+    <p class="requeststatus" id="requestStatus"></p>
+    <p class="httpresponse" id="httpResponse"></p>
+
+    <script src="script.js">
+        document.getElementById('sendPutRequestBtn').addEventListener('click', function() {
+            // Get user input value
+            const userInput = document.getElementById('userInput').value;
+            // Get request body from textarea
+            const requestBody = document.getElementById('requestBody').value;
+
+            // Show loading message
+            document.getElementById('requestStatus').innerText = 'Loading...';
+
+            // Construct URL with user input
+            const url = `https://gorest.co.in/public-api/users/${userInput}`;
+
+            // Make HTTP PUT request
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: requestBody
+            })
+            .then(response => {
+                // Set status code
+                document.getElementById('requestStatus').innerText = `Status Code: ${response.status}`;
+
+                // Check if response is successful
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('HTTP request failed');
+                }
+            })
+            .then(data => {
+                // Set HTTP response
+                document.getElementById('httpResponse').innerText = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Set error message
+                document.getElementById('httpResponse').innerText = 'An error occurred while fetching data.';
+            });
+        });
+
+    </script>
+</body>
+</html>

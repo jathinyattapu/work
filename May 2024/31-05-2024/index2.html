@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Request Demo</title>
+</head>
+<body>
+    <textarea id="requestBody"></textarea>
+    <button id="sendPostRequestBtn">Send POST Request</button>
+    <p class="requeststatus" id="requestStatus"></p>
+    <p class="httpresponse" id="httpResponse"></p>
+
+    <script>
+        document.getElementById('sendPostRequestBtn').addEventListener('click', function() {
+            // Get request body from textarea
+            const requestBody = document.getElementById('requestBody').value;
+
+            // Show loading message
+            document.getElementById('requestStatus').innerText = 'Loading...';
+
+            // Make HTTP POST request
+            fetch('https://gorest.co.in/public-api/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: requestBody
+            })
+            .then(response => {
+                // Set status code
+                document.getElementById('requestStatus').innerText = `Status Code: ${response.status}`;
+
+                // Check if response is successful
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('HTTP request failed');
+                }
+            })
+            .then(data => {
+                // Set HTTP response
+                document.getElementById('httpResponse').innerText = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Set error message
+                document.getElementById('httpResponse').innerText = 'An error occurred while fetching data.';
+            });
+        });
+
+    </script>
+</body>
+</html>
